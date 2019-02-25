@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8"/>
+	<title>0001</title>
+	<link href="https://fonts.googleapis.com/css?family=Oswald:200,400,700" rel="stylesheet"/> <!--200 for light,400 for regular,700 for bold. prefixed by ":" and separated by ","-->
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:200,200i,400,400i,900,900i" rel="stylesheet"> <!--weight is suffixed by "i" to denote italic style. the "+" represents a space between words-->
+	<style>
+		@font-face{
+			font-family: "abril";
+			src: url("../Downloads/fonts/abilfatface-regular-webfont.woff2") format("woff2"), url("../Downloads/fonts/abrilfatface-regular-webfont.woff") format("woff"); /*most browsers support WOFF/WOFF2. older iPhones/Android needs svg*/
+				/*put the more modern and better woff formats first while older formats like ttf last. an exception is eot which older IE, due to a bug, needs first to display some characters properly*/
+		}
+		html, body {
+		    font-size: 75px;
+			margin: 0;
+			padding: 0;
+			border: 0;
+		}
+		p {
+			color: grey; /*sets color of text*/
+		    font-family: "Fira Sans"; /*Oswald; /*aakar;/*"abril";/*, aakar, monospace; /*sans-serif*/
+		    font-style: normal; /*normal,italic*/
+		    text-align: center; /*left,right,center,justify. sets horizontal orientation*/
+		    line-height: 1.25; /*number as a multiplier. adjusts spacing between lines*/
+		    text-indent: ; /*5rem; /*indentation on the first line of text*/
+			hyphens: auto; /*none,manual,auto. other attributes: word-break,overflow-wrap. see also: text-overflow*/
+		}
+		a:link {      /*":focus" is a pseudo-class*/
+			color: cyan;
+			border: ; /*set the border at bottom's width (rem,thin,medium,thick), style (none,dotted,dashed,solid,double), color (rgb,color name,hex-color)*/
+			outline: ; /*1rem solid gold; /*unlike border, outline don't take space. set width, style, color*/
+			text-decoration: underline solid gold; /*set decoration line (underline,line-through,overline), style (solid, wavy, dashed), color*/
+		}
+		a:visited {
+			color: ;
+			border-bottom: ;
+			outline: ;
+			text-decoration: ;
+		}
+		a:focus {
+			color: ;
+			border-bottom: ;
+			outline: ;
+			text-decoration: ;
+		}
+		a:hover {
+			color: ;
+			border-bottom: ;
+			outline: ;
+			text-decoration: ;
+		}
+		a:active {
+			color: ;
+			border-bottom: ;
+			outline: ;
+			text-decoration: ;
+		}
+		ul {
+			width: 100%; /*100% so as to cover the entire viewport width*/
+			/*margin, padding, border has to be set to 0 or there will be white space around the element, especially above*/
+			margin: 0;
+			padding: 0;
+			border: 0 red;
+		}
+		li {
+			display: inline;
+			/*setting either or both the parent li element's width or the child a element width doesn't make a difference*/
+			/*width: 33%;*/
+			/*margin, padding, border is set to 0 to remove white space around each li element*/
+			/*but setting them 0 when these properties are already set 0 in the parent ul element doesn't effect new changes*/
+			
+			margin: 0;
+			padding: 0;
+			border: 0;
+
+			/*height: 3;*/
+			/*line-height: 1.5;*/ /*line-height can be set either on the links or the li elements*/
+			/*background: lightgreen;*/
+		}
+		#menumenu {
+			display: table;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			border: 0;
+		}
+		#menumenu li {
+			display: table-cell;
+			/*background: red;*/
+			height: 300%;
+			margin: 0;
+			padding: 0;
+			border: 0;
+			/*min-width and max-width has no effect here*/
+			/*
+			min-width: 20px;
+			max-width: 100%;
+			*/
+		}
+		#menumenu a {
+			/*width setting is not accepted in a list displayed as table-cells*/
+			/*width: 20%;*/
+			/*moreover, the table-cells, or the links (here), don't occupy the same width - the last link takes a larger space than the previous table-cells, or links*/
+			/*however, the grey background does not cover the entire length of the link's displayed text*/
+			background: gray;
+			height: 300%;
+			margin: 0;
+			padding: 0;
+			border: 0;
+			/*min-width and max-width has no effect here*/
+			/*
+			min-width: 20px;
+			max-width: 100%;
+			*/
+		}
+		a {
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			/*colored border with 0 width is still not displayed*/ 
+			/*border: 0 blueviolet;*/
+			width: 32%;
+			/*a elements have similar widths but there is a unremovable horizontal white space after each element even with border, padding and margin set to 0 */
+			background: orange;
+			/*min-width and max-width has no effect here*/
+			/*
+			min-width: 20px;
+			max-width: 100%;
+			*/
+			height: 3;
+		}
+		/*
+		.underline {
+		    text-decoration: underline red; /*none,underline,overline,line-through
+		}
+		*/
+		.transformed {
+		    text-transform: uppercase; /*none,uppercase,lowercase,capitalize,full-width*/
+		    font-weight: lighter; /*normal,bold,lighter,bolder,number from 100 to 900*/
+			font-style: ; /*italic;*/
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li><a href="#">Home</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+	<ul id="menumenu">
+		<li><a href="#">Home</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+	<p>I do not <a href="#">know</a>. I <span class="underline transformed">care</span> a lot. But I do not know. If you see me down the road, stop and see who you know. &aacute; &#xFC; \FC L\FC </p>
+</body>
+</html>
