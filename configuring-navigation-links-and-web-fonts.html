@@ -3,13 +3,17 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>0001</title>
-	<link href="https://fonts.googleapis.com/css?family=Oswald:200,400,700" rel="stylesheet"/> <!--200 for light,400 for regular,700 for bold. prefixed by ":" and separated by ","-->
-	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:200,200i,400,400i,900,900i" rel="stylesheet"> <!--weight is suffixed by "i" to denote italic style. the "+" represents a space between words-->
+	<link href="https://fonts.googleapis.com/css?family=Oswald:200,400,700" rel="stylesheet"/>
+	<!--200 for light,400 for regular,700 for bold. prefixed by ":" and separated by ","-->
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:200,200i,400,400i,900,900i" rel="stylesheet">
+	<!--weight is suffixed by "i" to denote italic style. the "+" represents a space between words-->
 	<style>
 		@font-face{
 			font-family: "abril";
 			src: url("../Downloads/fonts/abilfatface-regular-webfont.woff2") format("woff2"), url("../Downloads/fonts/abrilfatface-regular-webfont.woff") format("woff"); /*most browsers support WOFF/WOFF2. older iPhones/Android needs svg*/
-				/*put the more modern and better woff formats first while older formats like ttf last. an exception is eot which older IE, due to a bug, needs first to display some characters properly*/
+			/*put the more modern and better woff formats first while older formats like ttf last. 
+			an exception is eot which older IE, due to a bug, needs first to display some characters
+			properly*/
 		}
 		html, body {
 		    font-size: 75px;
@@ -24,13 +28,18 @@
 		    text-align: center; /*left,right,center,justify. sets horizontal orientation*/
 		    line-height: 1.25; /*number as a multiplier. adjusts spacing between lines*/
 		    text-indent: ; /*5rem; /*indentation on the first line of text*/
-			hyphens: auto; /*none,manual,auto. other attributes: word-break,overflow-wrap. see also: text-overflow*/
+			hyphens: auto;
+			/*none,manual,auto. other attributes: word-break,overflow-wrap. see also: text-overflow*/
 		}
 		a:link {      /*":focus" is a pseudo-class*/
 			color: cyan;
-			border: ; /*set the border at bottom's width (rem,thin,medium,thick), style (none,dotted,dashed,solid,double), color (rgb,color name,hex-color)*/
-			outline: ; /*1rem solid gold; /*unlike border, outline don't take space. set width, style, color*/
-			text-decoration: underline solid gold; /*set decoration line (underline,line-through,overline), style (solid, wavy, dashed), color*/
+			border: ;
+			/*set the border at bottom's width (rem,thin,medium,thick), style (none,dotted,dashed,solid,double),
+			color (rgb,color name,hex-color)*/
+			outline: ; /*1rem solid gold;
+			/*unlike border, outline don't take space. set width, style, color*/
+			text-decoration: underline solid gold;
+			/*set decoration line (underline,line-through,overline), style (solid, wavy, dashed), color*/
 		}
 		a:visited {
 			color: ;
@@ -58,24 +67,28 @@
 		}
 		ul {
 			width: 100%; /*100% so as to cover the entire viewport width*/
-			/*margin, padding, border has to be set to 0 or there will be white space around the element, especially above*/
+			/*margin, padding, border has to be set to 0 or there will be white space around the element,
+			especially above*/
 			margin: 0;
 			padding: 0;
 			border: 0 red;
 		}
 		li {
 			display: inline;
-			/*setting either or both the parent li element's width or the child a element width doesn't make a difference*/
+			/*setting the width can be made in either or both the parent li element or the child a element*/
 			/*width: 33%;*/
-			/*margin, padding, border is set to 0 to remove white space around each li element*/
-			/*but setting them 0 when these properties are already set 0 in the parent ul element doesn't effect new changes*/
 			
+			/*margin, padding, border is set to 0 to remove white space around each li element*/
+			/*but setting them 0 when these properties are already set 0 in the parent ul element
+			doesn't effect new changes*/
 			margin: 0;
 			padding: 0;
 			border: 0;
 
 			/*height: 3;*/
-			/*line-height: 1.5;*/ /*line-height can be set either on the links or the li elements*/
+			/*line-height: 1.5;*/
+			/*line-height can be set either on the links or the li elements*/
+			
 			/*background: lightgreen;*/
 		}
 		#menumenu {
@@ -92,6 +105,7 @@
 			margin: 0;
 			padding: 0;
 			border: 0;
+			
 			/*min-width and max-width has no effect here*/
 			/*
 			min-width: 20px;
@@ -99,15 +113,18 @@
 			*/
 		}
 		#menumenu a {
-			/*width setting is not accepted in a list displayed as table-cells*/
+			/*width cannot be in a list displayed as table*/
 			/*width: 20%;*/
-			/*moreover, the table-cells, or the links (here), don't occupy the same width - the last link takes a larger space than the previous table-cells, or links*/
+			/*moreover, the table-cells, or the links (here), don't occupy the same width
+			the last link takes a larger space than the previous table-cells, or links*/
 			/*however, the grey background does not cover the entire length of the link's displayed text*/
 			background: gray;
+			
 			height: 300%;
 			margin: 0;
 			padding: 0;
 			border: 0;
+			
 			/*min-width and max-width has no effect here*/
 			/*
 			min-width: 20px;
@@ -120,9 +137,12 @@
 			padding: 0;
 			/*colored border with 0 width is still not displayed*/ 
 			/*border: 0 blueviolet;*/
+			
 			width: 32%;
-			/*a elements have similar widths but there is a unremovable horizontal white space after each element even with border, padding and margin set to 0 */
+			/*a elements have similar widths, unlike display:table-cells but there is a unremovable horizontal
+			white space after each element even with border, padding and margin set to 0 */
 			background: orange;
+			
 			/*min-width and max-width has no effect here*/
 			/*
 			min-width: 20px;
